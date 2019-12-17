@@ -77,6 +77,11 @@ repositories {
         url = "https://modmaven.k-4u.nl"
     }
     maven {
+        // Refined storage
+        name = "RaouldBerge maven"
+        url = "https://repo.raoulvdberge.com"
+    }
+    maven {
         name = "CurseForge"
         url = "https://minecraft.curseforge.com/api/maven/"
     }
@@ -87,8 +92,10 @@ dependencies {
 
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
+    compileOnly fg.deobf("com.raoulvdberge:refinedstorage:${refined_storage_version}:api")
+    runtimeOnly fg.deobf("com.raoulvdberge:refinedstorage:${refined_storage_version}")
 
-    compile fg.deobf("steves-factory-manager-reborn:StevesFactoryManager-1.14.4:${sfm_version}:${sfm_tag}")
+    compile fg.deobf("steves-factory-manager-reborn:StevesFactoryManager-${mc_version}:${sfm_version}:${sfm_tag}")
 }
 
 jar {
