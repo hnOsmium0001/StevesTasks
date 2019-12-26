@@ -12,7 +12,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = "${mc_version}-${mod_version}-${release_type}"
+version = "${mc_version}-${mod_version}"
 group = 'powerlessri.stevestasks'
 archivesBaseName = "${mod_name}"
 
@@ -121,6 +121,6 @@ task buildForCommit(type: Copy, dependsOn: build) {
     from "$buildDir/libs"
     into "$buildDir/libs-custom"
     include "**/${mod_name}-*.jar"
-    rename "${mod_name}-${mc_version}-${mod_version}-${release_type}.jar",
+    rename "${mod_name}-${mc_version}-${mod_version}.jar",
             "${mod_name}-${mc_version}-${mod_version}-${getCheckedOutGitCommitHash()}.jar"
 }
