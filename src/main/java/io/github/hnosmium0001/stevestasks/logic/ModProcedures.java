@@ -1,12 +1,12 @@
-package powerlessri.stevestasks.logic;
+package io.github.hnosmium0001.stevestasks.logic;
 
+import io.github.hnosmium0001.stevestasks.logic.procedure.RSTriggerProcedure;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.registries.IForgeRegistry;
-import powerlessri.stevestasks.StevesTasks;
-import powerlessri.stevestasks.logic.procedure.RSTriggerProcedure;
+import io.github.hnosmium0001.stevestasks.StevesTasks;
 import vswe.stevesfactory.api.StevesFactoryManagerAPI;
 import vswe.stevesfactory.api.logic.IProcedure;
 import vswe.stevesfactory.api.logic.IProcedureType;

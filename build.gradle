@@ -1,16 +1,19 @@
 buildscript {
     repositories {
         maven { url = 'https://files.minecraftforge.net/maven' }
+        maven { url = 'https://plugins.gradle.org/m2/'}
         jcenter()
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
+        classpath 'com.wynprice.cursemaven:CurseMaven:2.1.1'
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
+apply plugin: "com.wynprice.cursemaven"
 
 version = "${mc_version}-${mod_version}"
 group = 'powerlessri.stevestasks'
@@ -55,7 +58,7 @@ minecraft {
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/')
+            args '--mod', 'stevestasks', '--all', '--output', file('src/generated/resources/')
 
             mods {
                 sfm {
@@ -81,10 +84,6 @@ repositories {
         name = "RaouldBerge maven"
         url = "https://repo.raoulvdberge.com"
     }
-    maven {
-        name = "CurseForge"
-        url = "https://minecraft.curseforge.com/api/maven/"
-    }
 }
 
 dependencies {
@@ -95,7 +94,7 @@ dependencies {
     compileOnly fg.deobf("com.raoulvdberge:refinedstorage:${refined_storage_version}:api")
     runtimeOnly fg.deobf("com.raoulvdberge:refinedstorage:${refined_storage_version}")
 
-    compile fg.deobf("steves-factory-manager-reborn:StevesFactoryManager-${mc_version}:${sfm_version}:${sfm_tag}")
+    implementation fg.deobf("curse.maven:steves-factory-manager:${sfm_version}")
 }
 
 jar {

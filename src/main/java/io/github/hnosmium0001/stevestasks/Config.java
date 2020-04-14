@@ -1,4 +1,4 @@
-package powerlessri.stevestasks;
+package io.github.hnosmium0001.stevestasks;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.ForgeConfigSpec.BooleanValue;
