@@ -1,6 +1,6 @@
-package io.github.hnosmium0001.stevestasks.block;
+package io.github.hnosmium0001.steves_tasks.block;
 
-import io.github.hnosmium0001.stevestasks.setup.ModBlocks;
+import io.github.hnosmium0001.steves_tasks.setup.ModBlocks;
 import net.minecraft.tileentity.TileEntity;
 
 public class TerminalTileEntity extends TileEntity {

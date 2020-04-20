@@ -16,7 +16,7 @@ apply plugin: 'maven-publish'
 apply plugin: "com.wynprice.cursemaven"
 
 version = "${mc_version}-${mod_version}"
-group = 'powerlessri.stevestasks'
+group = 'powerlessri.steves_tasks'
 archivesBaseName = "${mod_name}"
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
@@ -33,7 +33,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                sfm {
+                steves_tasks {
                     source sourceSets.main
                 }
             }
@@ -46,7 +46,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                sfm {
+                steves_tasks {
                     source sourceSets.main
                 }
             }
@@ -58,10 +58,10 @@ minecraft {
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'stevestasks', '--all', '--output', file('src/generated/resources/')
+            args '--mod', 'steves_tasks', '--all', '--output', file('src/generated/resources/')
 
             mods {
-                sfm {
+                steves_tasks {
                     source sourceSets.main
                 }
             }
@@ -99,7 +99,7 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "stevestasks",
+                "Specification-Title"     : "steves_tasks",
                 "Specification-Vendor"    : "stevestaskssareus",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,

@@ -1,14 +1,13 @@
-package io.github.hnosmium0001.stevestasks;
+package io.github.hnosmium0001.steves_tasks;
 
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
-import vswe.stevesfactory.StevesFactoryManager;
 
 @Mod(StevesTasks.MODID)
 public class StevesTasks {
 
-    public static final String MODID = "stevestasks";
+    public static final String MODID = "steves_tasks";
 
     public static StevesTasks instance;
 

@@ -1,4 +1,4 @@
-package io.github.hnosmium0001.stevestasks;
+package io.github.hnosmium0001.steves_tasks;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.ForgeConfigSpec.BooleanValue;

@@ -1,7 +1,7 @@
-package io.github.hnosmium0001.stevestasks.setup;
+package io.github.hnosmium0001.steves_tasks.setup;
 
-import io.github.hnosmium0001.stevestasks.StevesTasks;
-import io.github.hnosmium0001.stevestasks.logic.procedure.RSTriggerProcedure;
+import io.github.hnosmium0001.steves_tasks.StevesTasks;
+import io.github.hnosmium0001.steves_tasks.logic.procedure.RSTriggerProcedure;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

@@ -1,4 +1,4 @@
-package io.github.hnosmium0001.stevestasks.ui.terminal;
+package io.github.hnosmium0001.steves_tasks.ui.terminal;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.container.Container;

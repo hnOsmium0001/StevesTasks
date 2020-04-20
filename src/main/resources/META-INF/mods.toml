@@ -5,28 +5,28 @@ displayURL="http://github.com/hnOsmium0001/StevesTasks"
 authors="hnOsmium0001"
 
 [[mods]]
-modId="stevestasks"
+modId="steves_tasks"
 version="${file.jarVersion}"
 displayName="Steve's Tasks"
 description='''
 Steve's Tasks
 '''
 
-[[dependencies.stevestasks]]
+[[dependencies.steves_tasks]]
     modId="forge"
     mandatory=true
     versionRange="[28,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.stevestasks]]
+[[dependencies.steves_tasks]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.14.4]"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.stevestasks]]
+[[dependencies.steves_tasks]]
     modId="sfm"
     mandatory=true
     # TODO change for SFM release
@@ -34,7 +34,7 @@ Steve's Tasks
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.stevestasks]]
+[[dependencies.steves_tasks]]
     modId="refinedstorage"
     mandatory=false
     versionRange="[1.7,)"

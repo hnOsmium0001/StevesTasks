@@ -1,8 +1,8 @@
-package io.github.hnosmium0001.stevestasks.setup;
+package io.github.hnosmium0001.steves_tasks.setup;
 
-import io.github.hnosmium0001.stevestasks.StevesTasks;
-import io.github.hnosmium0001.stevestasks.block.TerminalBlock;
-import io.github.hnosmium0001.stevestasks.block.TerminalTileEntity;
+import io.github.hnosmium0001.steves_tasks.StevesTasks;
+import io.github.hnosmium0001.steves_tasks.block.TerminalBlock;
+import io.github.hnosmium0001.steves_tasks.block.TerminalTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntityType;

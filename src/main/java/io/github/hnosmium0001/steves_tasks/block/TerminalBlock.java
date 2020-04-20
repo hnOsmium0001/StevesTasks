@@ -1,4 +1,4 @@
-package io.github.hnosmium0001.stevestasks.block;
+package io.github.hnosmium0001.steves_tasks.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

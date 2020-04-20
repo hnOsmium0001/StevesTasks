@@ -1,4 +1,4 @@
-package io.github.hnosmium0001.stevestasks.ui.terminal;
+package io.github.hnosmium0001.steves_tasks.ui.terminal;
 
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.entity.player.PlayerInventory;
