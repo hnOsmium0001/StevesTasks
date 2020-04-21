@@ -7,12 +7,14 @@ buildscript {
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.+'
         classpath 'com.wynprice.cursemaven:CurseMaven:2.1.1'
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
+apply plugin: 'com.jfrog.bintray'
 apply plugin: "com.wynprice.cursemaven"
 
 version = "${mc_version}-${mod_version}"
@@ -80,9 +82,9 @@ repositories {
         url = "https://modmaven.k-4u.nl"
     }
     maven {
-        // Refined storage
-        name = "RaouldBerge maven"
-        url = "https://repo.raoulvdberge.com"
+        // Steve's Factory Manager
+        name = "hnOsmium0001 Bintray"
+        url = "https://dl.bintray.com/hnosmium0001/Maven"
     }
 }
 
@@ -93,7 +95,7 @@ dependencies {
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
 
     implementation fg.deobf("curse.maven:refined-storage:${refined_storage_version}")
-    implementation fg.deobf("curse.maven:steves-factory-manager:${sfm_version}")
+    implementation fg.deobf("vswe.stevesfactory:steves-factory-manager:${mc_version}-${sfm_version}")
 }
 
 jar {
@@ -121,4 +123,37 @@ task buildForCommit(type: Copy, dependsOn: build) {
     include "**/${mod_name}-*.jar"
     rename "${mod_name}-${mc_version}-${mod_version}.jar",
             "${mod_name}-${mc_version}-${mod_version}-${getCheckedOutGitCommitHash()}.jar"
+}
+
+bintray {
+    user = findProperty('bintray.user')
+    key = findProperty('bintray.apiKey')
+    publications = ['BintrayPublication']
+    pkg {
+        repo = 'Maven'
+        name = 'deep-mining'
+        licenses = ['MIT']
+        vcsUrl = 'https://github.com/hnOsmium0001/DeepMining.git'
+        version {
+            name = "$project.version"
+            released = new Date()
+        }
+    }
+}
+
+def reobfFile = file("$buildDir/reobfJar/output.jar")
+def reobfArtifact = artifacts.add('default', reobfFile) {
+    type 'jar'
+    builtBy 'reobfJar'
+}
+
+publishing {
+    publications {
+        BintrayPublication(MavenPublication) {
+            artifact reobfArtifact
+            groupId project.group
+            artifactId 'deep-mining'
+            version project.version
+        }
+    }
 }
